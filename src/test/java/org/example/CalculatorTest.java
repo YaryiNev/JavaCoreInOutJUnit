@@ -1,14 +1,6 @@
 package org.example;
 
 import org.junit.jupiter.api.*;
-import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.Arguments;
-import org.junit.jupiter.params.provider.MethodSource;
-import org.junit.jupiter.params.provider.ValueSource;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.stream.Stream;
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class CalculatorTest {
@@ -36,10 +28,10 @@ public class CalculatorTest {
     }
 
     @Test
-    public void PI_NO_NULL() {
+    public void PI_INIT() {
         MathMethods mathMethods = new MathMethods();
-        double result = MathMethods.PI;
-        double expected = 3.14;
-        Assertions.assertNotNull(expected);
+        boolean result = MathMethods.PI == 3.14;
+        boolean expected = true;
+        Assertions.assertTrue(expected);
     }
 }
