@@ -31,7 +31,6 @@ public class CalculatorTest {
     public void PI_INIT() {
         MathMethods mathMethods = new MathMethods();
         boolean result = MathMethods.PI == 3.14;
-        boolean expected = true;
-        Assertions.assertTrue(expected);
+        Assertions.assertTrue(result);
     }
 }
